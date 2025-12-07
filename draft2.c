@@ -3,11 +3,8 @@
 
 
 // Pre-processor Macros for a multi-byte array
+// Adapted from code available on:
 //https://www.cs.emory.edu/~cheung/Courses/255/Syllabus/1-C-intro/bit-array.html
-
-#define TURN_BIT_ON(array, bit)   (array[bit / 8] |= (1 << (bit % 8)))
-#define TURN_BIT_OFF(array, bit)  (array[bit / 8] &= ~(1 << (bit % 8)))
-#define CHECK_BIT(array, bit)     ((array[bit / 8] & (1 << (bit % 8))) ? 1 : 0)
 
 uint16_t global_home_node;
 
@@ -225,4 +222,8 @@ void sender(char key){
         }
     }
 
-
+    tran_indiction(uint16_t sourceAddr, uint8_t sourcePort, uint8_t *received_payload, uint8_t length){
+        if(sourcePort == 60){
+            
+        }
+    }
